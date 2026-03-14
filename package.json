@@ -1,0 +1,23 @@
+{
+  "name": "smart-waste-management-frontend",
+  "version": "1.0.0",
+  "description": "Smart Waste Management System Frontend",
+  "keywords": [
+    "waste",
+    "management",
+    "frontend"
+  ],
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "sqlite3": "^6.0.1"
+  }
+}

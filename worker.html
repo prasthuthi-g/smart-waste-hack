@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Municipal Worker Dashboard - Smart Waste Management</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+<header>
+<nav>
+<h1><i class="fas fa-hard-hat"></i> Municipal Worker Dashboard</h1>
+<div class="nav-actions">
+<span id="userInfo"></span>
+<button onclick="logout()" class="logout-btn">
+<i class="fas fa-sign-out-alt"></i> Sign Out
+</button>
+</div>
+</nav>
+</header>
+
+<div class="container">
+<div class="dashboard-grid">
+<div class="card schedule-card">
+<h2><i class="fas fa-calendar-plus"></i> Schedule Waste Pickup</h2>
+<form id="scheduleForm">
+<div class="form-group">
+<label for="areaSelect">Select Area</label>
+<select id="areaSelect" required>
+<option value="">Choose an area</option>
+<option value="Block A">Block A</option>
+<option value="Block B">Block B</option>
+<option value="Block C">Block C</option>
+</select>
+</div>
+<div class="form-group">
+<label for="pickupDate">Pickup Date</label>
+<input type="date" id="pickupDate" required>
+</div>
+<div class="form-group">
+<label for="pickupTime">Pickup Time</label>
+<input type="time" id="pickupTime" required>
+</div>
+<div class="form-group">
+<label for="pickupMessage">Message to Residents</label>
+<textarea id="pickupMessage" placeholder="Enter a message for residents..." required></textarea>
+</div>
+<button type="submit" class="cta-button">
+<i class="fas fa-plus"></i> Schedule Pickup
+</button>
+</form>
+</div>
+
+<div class="card current-schedules">
+<h2><i class="fas fa-clock"></i> Current Schedules</h2>
+<div id="schedulesList">
+<div class="loading">
+<i class="fas fa-spinner fa-spin"></i> Loading schedules...
+</div>
+</div>
+</div>
+
+<div class="card notifications-card">
+<h2><i class="fas fa-bell"></i> Recent Activity</h2>
+<div id="notificationsList">
+<div class="loading">
+<i class="fas fa-spinner fa-spin"></i> Loading notifications...
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

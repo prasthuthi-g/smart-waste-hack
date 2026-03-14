@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Smart Waste Management - Login</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+<div class="auth-container">
+<div class="auth-card">
+<div class="auth-header">
+<h2 id="authTitle">Welcome Back</h2>
+<p id="authSubtitle">Sign in to your account</p>
+</div>
+
+<div class="auth-tabs">
+<button class="tab-btn active" onclick="switchTab('login')">Login</button>
+<button class="tab-btn" onclick="switchTab('register')">Register</button>
+</div>
+
+<div class="user-type-selector">
+<button class="type-btn active" data-type="resident" onclick="setUserType('resident')">
+<i class="fas fa-home"></i> Resident
+</button>
+<button class="type-btn" data-type="worker" onclick="setUserType('worker')">
+<i class="fas fa-hard-hat"></i> Municipal Worker
+</button>
+</div>
+
+<!-- Login Form -->
+<form id="loginForm" class="auth-form active">
+<div class="form-group">
+<label for="loginEmail">Email Address</label>
+<input type="email" id="loginEmail" placeholder="Enter your email" required>
+</div>
+<div class="form-group">
+<label for="loginPassword">Password</label>
+<input type="password" id="loginPassword" placeholder="Enter your password" required>
+</div>
+<button type="submit" class="auth-btn">
+<i class="fas fa-sign-in-alt"></i> Sign In
+</button>
+</form>
+
+<!-- Register Form -->
+<form id="registerForm" class="auth-form">
+<div class="form-group">
+<label for="registerName">Full Name</label>
+<input type="text" id="registerName" placeholder="Enter your full name" required>
+</div>
+<div class="form-group">
+<label for="registerEmail">Email Address</label>
+<input type="email" id="registerEmail" placeholder="Enter your email" required>
+</div>
+<div class="form-group">
+<label for="registerPassword">Password</label>
+<input type="password" id="registerPassword" placeholder="Create a password" required>
+</div>
+<div class="form-group" id="areaGroup" style="display: none;">
+<label for="registerArea">Residential Area</label>
+<select id="registerArea" required>
+<option value="">Select your area</option>
+<option value="Block A">Block A</option>
+<option value="Block B">Block B</option>
+<option value="Block C">Block C</option>
+</select>
+</div>
+<button type="submit" class="auth-btn">
+<i class="fas fa-user-plus"></i> Create Account
+</button>
+</form>
+
+<div class="auth-footer">
+<p>Smart Waste Management System - Making cities cleaner, one pickup at a time.</p>
+</div>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Resident Dashboard - Smart Waste Management</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+<header>
+<nav>
+<h1><i class="fas fa-home"></i> Resident Dashboard</h1>
+<div class="nav-actions">
+<span id="userInfo"></span>
+<button onclick="logout()" class="logout-btn">
+<i class="fas fa-sign-out-alt"></i> Sign Out
+</button>
+</div>
+</nav>
+</header>
+
+<div class="container">
+<div class="dashboard-grid">
+<div class="card welcome-card">
+<h2><i class="fas fa-user-circle"></i> Welcome Back!</h2>
+<div id="userDetails"></div>
+</div>
+
+<div class="card schedule-card">
+<h2><i class="fas fa-calendar-check"></i> Your Waste Collection Schedule</h2>
+<div id="scheduleBox">
+<div class="loading">
+<i class="fas fa-spinner fa-spin"></i> Loading your schedule...
+</div>
+</div>
+</div>
+
+<div class="card info-card">
+<h2><i class="fas fa-info-circle"></i> Collection Information</h2>
+<ul class="info-list">
+<li><i class="fas fa-clock"></i> Collections happen between 8 AM - 6 PM</li>
+<li><i class="fas fa-recycle"></i> Please sort your waste properly</li>
+<li><i class="fas fa-bell"></i> You'll receive notifications before pickup</li>
+<li><i class="fas fa-map-marker-alt"></i> Place bins outside your door by 7 AM</li>
+</ul>
+</div>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
